@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-md-4 col-sm-5 col-xs-6 text-center" id="stop-watch-app">
+        <div class="container-fluid" id="header">
+            <h3>Секундомер</h3>
+            <hr>
+            <p id="lap-timer"> {{$ctrl.lapTimer | stopwatchTime }}</p>
+            <p id="main-timer"> {{$ctrl.mainTimer | stopwatchTime }}</p>
+        </div>
+        <div class="container-fluid">
+
+            <button class="btn-reset" ng-click="$ctrl.resetAll()" ng-hide="$ctrl.isResetBtnHide">Сброс</button>
+            <button class="btn-lap" ng-class="{'btn-lap-active': $ctrl.isLapBtnActive}" ng-click="$ctrl.startLapTimer()"
+                    ng-hide="$ctrl.isLapBtnHide" ng-disabled="!$ctrl.isLapBtnActive">Круг
+            </button>
+            <button class="btn-start" ng-click="$ctrl.startBothTimer()" ng-hide="$ctrl.isStartBtnHide">Старт</button>
+            <button class="btn-stop" ng-click="$ctrl.stopBothTimer()" ng-hide="$ctrl.isStopBtnHide">Стоп</button>
+
+            <ul class="scroll">
+                <li ng-repeat="result in $ctrl.result ">
+                    <p><span class="lap-num">Круг {{result.lapNum}}</span> <span class="lap-time">{{result.time | stopwatchTime}}</span>
+                    </p>
+                    <hr>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

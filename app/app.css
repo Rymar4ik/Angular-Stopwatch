@@ -1,0 +1,157 @@
+#stop-watch-app {
+    padding: 0;
+    border: 2px solid #858583;
+    height: 600px;
+    background: #f0eff5;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#header {
+    background: #ffffff;
+}
+
+h3 {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+hr {
+    margin-top: 10px;
+    border-color: #c9c8ce;
+}
+
+li > hr {
+    clear: both;
+    padding: 1px;
+}
+
+
+
+#main-timer, #lap-timer {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+}
+
+#main-timer {
+    margin-bottom: 50px;
+    font-size: 7vw;
+    line-height: 7vw;
+    font-weight: 100;
+    color: #000000;
+}
+
+#lap-timer {
+    text-align: right;
+    font-size: 2vw;
+    line-height: 2vw;
+    color: #cbcbcb;
+}
+
+button {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    margin: 25px 55px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 3px 3px 6px rgba(86, 86, 86, 0.4);
+    text-align: center;
+    line-height: 85px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+    outline: none;
+}
+
+@media(max-width: 1260px) and (min-width: 768px){
+    button{
+        margin: 25px 48px;
+    }
+}
+
+@media(max-width: 1015px) and (min-width: 600px){
+    button{
+        margin: 25px 25px;
+    }
+}
+@media(max-width: 610px) and (min-width: 500px){
+
+    button{
+        margin: 25px 10px;
+    }
+
+}
+
+.btn-lap {
+    color: #cbcbcb;
+    background: #f7f7f9;
+}
+
+.btn-lap-active,
+.btn-reset {
+    color: #000000;
+    background: #ffffff;
+}
+
+.btn-start {
+    color: #70d985;
+}
+
+.btn-stop {
+    color: #e9624f;
+}
+
+ul{
+    padding: 0;
+    max-height: 207px;
+
+}
+li {
+    height: 20px;
+    line-height: 20px;
+    list-style-type: none;
+
+}
+.lap-num,
+.lap-time{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.lap-time {
+    float: right;
+    margin-right: 45px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.lap-num {
+    float: left;
+    margin-left: 75px;
+    color: #929197;
+    font-size: 16px;
+
+}
+
+@media(max-width: 610px) and (min-width: 500px){
+
+    .lap-num{
+        margin-left: 15px;
+    }
+
+    .lap-time{
+        margin-right: 5px;
+    }
+}
+
+.scroll  {
+    width:100%;
+    height:207px ;
+    overflow:scroll ;
+    overflow-x:hidden;
+}
